@@ -15,7 +15,7 @@ module.exports = class SpoilerPlugin extends Plugin {
           var words = process.env.worlist.toLowerCase().split(", ");
           var msg = message.content.toLowerCase();
           if(msg.includes('banana')) {
-            console.log(words)
+            console.log('words')
           }
         })
     pluginWillUnload(); {
