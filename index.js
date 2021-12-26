@@ -14,13 +14,12 @@ module.exports = class SpoilerPlugin extends Plugin {
         })
         
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
-          var msg = message.content.toLowerCase;
-          if(msg.includes("lmao")) {
-            console.log("SPOILER DETECTED!")
-          }
-        });
+          var msgContent = message.content.toLowerCase;
+          console.log(msgContent);
+        })
+        }
     }
-    pluginWillUnload() {
-      powercord.api.settings.unregisterSettings(this.entityID);
+    pluginWillUnload(); {
+      powercord.api.settings.unregisterSettings(this.entityID)
     }
   }
