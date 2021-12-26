@@ -1,2 +1,2 @@
-# PowercordSpoilerPlugin
- Mutes words
+# NOT WORKING
+i give up
