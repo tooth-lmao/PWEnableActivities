@@ -12,7 +12,7 @@ module.exports = class settings extends React.PureComponent {
           <TextInput
             onChange={val => {
               this.props.updateSetting('settingToSave', val);
-              process.env.wordlist = val.toLowerCase().split(", ");
+              process.env.wordlist = val
               console.log(process.env.wordlist);
             }}
             defaultValue={this.props.getSetting('settingToSave', 'defaultValue')}
