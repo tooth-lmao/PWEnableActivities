@@ -14,7 +14,7 @@ module.exports = class SpoilerPlugin extends Plugin {
         })
         
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
-          var msgContent = message.content.toLowerCase;
+          var msgContent = message.content.toLowerCase();
           console.log(msgContent);
         })
     pluginWillUnload(); {
