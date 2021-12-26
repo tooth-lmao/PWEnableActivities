@@ -14,8 +14,8 @@ module.exports = class SpoilerPlugin extends Plugin {
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
           var words = process.env.worlist.toLowerCase().split(", ");
           var msg = message.content.toLowerCase();
-          if(words.includes(msg)) {
-            console.log("Word detected")
+          if(msg.includes(banana)) {
+            console.log(words)
           }
         })
     pluginWillUnload(); {
