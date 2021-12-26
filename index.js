@@ -16,7 +16,8 @@ module.exports = class SpoilerPlugin extends Plugin {
           var wordlist = ["spider-man", "spider", "tobey", "andrew"]
           if(wordlist.includes(msg)) {
             
-            
+            console.log('funciona carago')
+
             const message = args[0].message;
 						document.getElementById(
 							`chat-messages-${message.id}`
@@ -43,7 +44,7 @@ module.exports = class SpoilerPlugin extends Plugin {
           }
         });
 
-        
+
     pluginWillUnload(); {
       powercord.api.settings.unregisterSettings(this.entityID)
     }
