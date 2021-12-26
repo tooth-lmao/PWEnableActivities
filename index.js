@@ -1,8 +1,7 @@
 const { Plugin } = require('powercord/entities');
 const { getModule, messages, FluxDispatcher } = require('powercord/webpack');
 const { inject, uninject } = require("powercord/injector");
-const { words } = require("./settings.jsx");
- const Settings = require("./components/settings.jsx");
+const Settings = require("./components/settings.jsx");
 
 module.exports = class SpoilerPlugin extends Plugin {
     startPlugin() {
