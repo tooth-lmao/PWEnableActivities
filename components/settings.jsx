@@ -1,5 +1,5 @@
-const { React } = require('powercord/webpack'); // We have to import React
-const { TextInput } = require('powercord/components/settings'); // Here we Import the TextInput Component for later use
+const { React } = require('powercord/webpack');
+const { TextInput } = require('powercord/components/settings'); 
 
 module.exports = class settings extends React.PureComponent {
     constructor(props) {
@@ -12,11 +12,11 @@ module.exports = class settings extends React.PureComponent {
           <TextInput
             onChange={val => this.props.updateSetting('settingToSave', val)}
             defaultValue={this.props.getSetting('settingToSave', 'defaultValue')}
-            required={false}
+            required={true}
             disabled={false}
-            note='This will be shown below the Text Input as a note'
+            note='Ex: "spider-man, harry potter, netflix" '
            >
-            Settings Field
+            Word List
           </TextInput>
         </div>
       )
