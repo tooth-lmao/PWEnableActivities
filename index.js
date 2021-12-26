@@ -12,11 +12,9 @@ module.exports = class SpoilerPlugin extends Plugin {
         })
         
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
-          var words = process.env.wordlist.toLowerCase().split(", ");
           var msg = message.content.toLowerCase();
-          if(words.includes(msg)) {
-            console.log('words')
-          }
+          console.log(process.env.wordlist.toLowerCase().split(", "));
+          
         })
     pluginWillUnload(); {
       powercord.api.settings.unregisterSettings(this.entityID)
