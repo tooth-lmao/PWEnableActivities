@@ -14,8 +14,10 @@ module.exports = class SpoilerPlugin extends Plugin {
         })
         
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
-          var msgContent = message.content.toLowerCase();
-          console.log(msgContent);
+          var msg = message.content.toLowerCase();
+          if(msg = "lmao") {
+            console.log("a")
+          }
         })
     pluginWillUnload(); {
       powercord.api.settings.unregisterSettings(this.entityID)
