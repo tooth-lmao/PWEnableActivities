@@ -11,7 +11,7 @@ module.exports = class SpoilerPlugin extends Plugin {
           render: Settings
         })
         
-        wordlist = process.env.worlist.spit(",");
+        var wordlist = process.env.worlist.spit(",");
 
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
           var msg = message.content.toLowerCase();
