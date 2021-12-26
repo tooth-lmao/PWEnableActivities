@@ -12,8 +12,8 @@ module.exports = class settings extends React.PureComponent {
           <TextInput
             onChange={val => {
               this.props.updateSetting('settingToSave', val)
-              var wordlist = val
-              console.log(wordlist)
+              process.env.wordlist = val
+              console.log(process.env.wordlist)
             }}
             defaultValue={this.props.getSetting('settingToSave', 'defaultValue')}
             note='Ex: "spider-man, harry potter, netflix" '
