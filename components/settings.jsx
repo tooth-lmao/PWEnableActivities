@@ -7,12 +7,11 @@ module.exports = class settings extends React.PureComponent {
     }
   
     render() {
-      const { getSetting, toggleSetting, updateSetting } = this.props;
       return(
         <div>
           <TextInput
-            onChange={val => updateSetting('settingToSave', val)}
-            defaultValue={getSetting('settingToSave', 'defaultValue')}
+            onChange={val => this.props.updateSetting('settingToSave', val)}
+            defaultValue={this.props.getSetting('settingToSave', 'defaultValue')}
             note='Ex: "spider-man, harry potter, netflix" '
            >
             Word List
