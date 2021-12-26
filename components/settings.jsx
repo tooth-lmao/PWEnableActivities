@@ -22,3 +22,6 @@ module.exports = class settings extends React.PureComponent {
       )
     }
   }
+
+  var ye = "lmao"
+  module.exports = { words };
