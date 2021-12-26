@@ -12,8 +12,9 @@ module.exports = class SpoilerPlugin extends Plugin {
         })
         
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
+          var wordlist = ["spider-man", "harry potter"];
           var msg = message.content.toLowerCase();
-          if(process.env.wordlist.includes(msg)) {
+          if(wordlist.includes(msg)) {
             console.log("Word detected")
           }
         })
