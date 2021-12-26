@@ -17,9 +17,7 @@ module.exports = class SpoilerPlugin extends Plugin {
           var msgContent = message.content.toLowerCase;
           console.log(msgContent);
         })
-        }
-    }
     pluginWillUnload(); {
       powercord.api.settings.unregisterSettings(this.entityID)
     }
-  }
+  }}
