@@ -13,6 +13,7 @@ module.exports = class settings extends React.PureComponent {
             onChange={val => {
               this.props.updateSetting('settingToSave', val)
               var wordlist = val
+              console.log(wordlist)
             }}
             defaultValue={this.props.getSetting('settingToSave', 'defaultValue')}
             note='Ex: "spider-man, harry potter, netflix" '
