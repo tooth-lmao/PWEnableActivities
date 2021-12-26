@@ -15,7 +15,7 @@ module.exports = class SpoilerPlugin extends Plugin {
         
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
           var msg = message.content.toLowerCase();
-          if(msg = "lmao") {
+          if (msg = "lmao") {
             console.log("a")
           }
         })
