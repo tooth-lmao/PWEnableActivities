@@ -5,47 +5,49 @@ const Settings = require("./components/settings.jsx");
 
 module.exports = class SpoilerPlugin extends Plugin {
     startPlugin() {
-        powercord.api.settings.registerSettings(this.entityID, {
-          category: this.entityID,
-          label: 'Mute Words', 
-          render: Settings
-        })
-
-        FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
-          var msg = message.content.toLowerCase();
-          var wordlist = ["spider-man", "spider", "tobey", "andrew"]
-          if(wordlist.includes(msg)) {
-            
-            console.log('funciona carago')
-
-            const message = args[0].message;
-						document.getElementById(
-							`chat-messages-${message.id}`
-						).style.display = 'none';
-
-						powercord.api.notices.sendToast('message-hidden', {
-							header: 'Success!',
-							type: 'success',
-							timeout: 10000,
-							content:
-								'The message has been hidden. To bring it back, switch to another channel then switch to this one.',
-							buttons: [
-								{
-									text: 'Dismiss',
-									look: 'filled',
-									size: 'small',
-									onClick: () =>
-										powercord.api.notices.closeToast(
-											'message-hidden'
-										),
-								},
-							],
-						});
-          }
-        });
-
-
+        webpackChunkdiscord_app.push([
+			[Math.random().toString(36)],
+			{},
+			(e) => {
+			  for (const id in e.c) {
+				const m = e.c[id].exports;
+				if (m?.default?.getEnabledAppIds) {
+				  const saved = m.default.getEnabledAppIds;
+				  window.disableActivities = () => {
+					m.default.getEnabledAppIds = saved;
+					window.disableActivities = undefined;
+				  };
+		  
+				  m.default.getEnabledAppIds = () => [
+					"755827207812677713",
+					"832012774040141894",
+					"832013003968348200",
+					"878067389634314250",
+					"879863976006127627",
+					"879863686565621790",
+					"852509694341283871",
+					"880218394199220334",
+					"773336526917861400",
+					"814288819477020702",
+					"879864070101172255",
+					"879863881349087252",
+					"832012854282158180",
+					"763133495793942528",
+					"880218832743055411",
+					"878067427668275241",
+					"879864010126786570",
+					"879864104980979792",
+					"891001866073296967",
+					"832012586023256104",
+					"832012682520428625",
+					"832013108234289153",
+				  ];
+				  return;
+				}
+			  }
+			},
+		  ]);
     pluginWillUnload(); {
-      powercord.api.settings.unregisterSettings(this.entityID)
+    
     }
   }}
