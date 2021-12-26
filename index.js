@@ -10,14 +10,11 @@ module.exports = class SpoilerPlugin extends Plugin {
           label: 'Mute Words', 
           render: Settings
         })
-        
-        var wordlist = process.env.worlist.spit(",");
 
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
           var msg = message.content.toLowerCase();
-          //if(process.env.wordlist.split(", ").includes(msg)) {
+          var wordlist = process.env.worlist.spit(",");
           console.log(wordlist);
-          //};
         });
     pluginWillUnload(); {
       powercord.api.settings.unregisterSettings(this.entityID)
