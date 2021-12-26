@@ -14,7 +14,10 @@ module.exports = class SpoilerPlugin extends Plugin {
         })
         
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
-          console.log(message.content)
+          var msg = message.content.toLowerCase;
+          if(msg.includes("lmao")) {
+            console.log("SPOILER DETECTED!")
+          }
         });
     }
     pluginWillUnload() {
