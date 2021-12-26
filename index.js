@@ -13,7 +13,7 @@ module.exports = class SpoilerPlugin extends Plugin {
 
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
           var msg = message.content.toLowerCase();
-          var wordlist = process.env.worlist.spit(",");
+          var wordlist = ["spider-man", "spider", "tobey", "andrew"]
           console.log(wordlist);
         });
     pluginWillUnload(); {
