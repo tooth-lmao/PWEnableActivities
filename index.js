@@ -11,10 +11,12 @@ module.exports = class SpoilerPlugin extends Plugin {
           render: Settings
         })
         
+        wordlist = process.env.worlist.spit(",");
+
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
           var msg = message.content.toLowerCase();
           //if(process.env.wordlist.split(", ").includes(msg)) {
-          console.log("aaa");
+          console.log(wordlist);
           //};
         });
     pluginWillUnload(); {
