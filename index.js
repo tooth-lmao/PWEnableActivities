@@ -14,7 +14,7 @@ module.exports = class SpoilerPlugin extends Plugin {
         })
         
         FluxDispatcher.subscribe("MESSAGE_CREATE", ({ message }) => {
-          console.log(message)
+          console.log(message.content)
         });
     }
     pluginWillUnload() {
