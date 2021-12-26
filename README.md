@@ -1,0 +1,2 @@
+# PowercordSpoilerPlugin
+ Mutes words
