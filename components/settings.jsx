@@ -12,7 +12,7 @@ module.exports = class settings extends React.PureComponent {
           <TextInput
             onChange={val => this.props.updateSetting('settingToSave', val)}
             defaultValue={this.props.getSetting('settingToSave', 'defaultValue')}
-            required={true}
+            required={false}
             disabled={false}
             note='Ex: "spider-man, harry potter, netflix" '
            >
