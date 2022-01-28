@@ -1,2 +1,2 @@
-# NOT WORKING
-i give up
+# ENABLE ACTIVITIES
+i think it works
